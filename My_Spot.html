@@ -218,7 +218,7 @@
 										<header>
 											<h2>SwiftUI</h2>
 										</header>
-										<p><a href="https://developer.apple.com/xcode/swiftui/" target="_blank">SwiftUI</a> is Apple's declaritive UI framework and its used all throughout My Spot. My Spot is built on SwiftUI and requires much less code than its UI counterpart, UIKit. SwiftUI aslo made it much easier to target multiple apps in the same project. For example, the AppClipp extension uses the axact same files that the main app uses, making it much easier to manage and maintain both apps.</p>
+										<p><a href="https://developer.apple.com/xcode/swiftui/" target="_blank">SwiftUI</a> is Apple's declaritive UI framework and its used all throughout My Spot. My Spot is built on SwiftUI and requires much less code than its UI counterpart, UIKit. SwiftUI aslo made it much easier to target multiple apps in the same project. For example, the AppClip extension uses the axact same files that the main app uses, making it much easier to manage and maintain both apps.</p>
 									</div>
 									<span class="image"><img src="images/SwiftUI.png" alt="My Spot Logo" /></span>
 								</div>
@@ -353,9 +353,18 @@
 										<header>
 											<h2>WeatherKit</h2>
 										</header>
-										<p><a href="https://developer.apple.com/weatherkit/" target="_blank">WeatherKit</a> is Apple's new api for iOS 16 to fetch weather information. My Spot uses this api in the detail view of eah spot. This is very useful for users deciding what day they should visit said spot. It allows users to check if it's too much rain to visit, or too hot. Maybe the user wants to go when it's the brightest out, well the WeatherKit api also predicts when the sun will be at its peak. And if there are any weather alerts in the area, My Spot will advise the user so they can make their own descision on whether they would still like to visit the spot or not. The weather object recieved in this api call retrives a large amount of weather data and My Spot uses that data to best inform the user on each day's weather conditions.</p>
+										<p><a href="https://developer.apple.com/weatherkit/" target="_blank">WeatherKit</a> is Apple's api for iOS 16 to fetch weather information. My Spot uses this api in the detail view of eah spot. This is very useful for users deciding what day they should visit said spot. It allows users to check if it's too much rain to visit, or too hot. Maybe the user wants to go when it's the brightest out, well the WeatherKit api also predicts when the sun will be at its peak. And if there are any weather alerts in the area, My Spot will advise the user so they can make their own descision on whether they would still like to visit the spot or not. The weather object recieved in this api call retrives a large amount of weather data and My Spot uses that data to best inform the user on each day's weather conditions.</p>
 									</div>
 									<span class="image"><img src="images/WeatherKit.png" alt="My Spot Logo" /></span>
+								</div>
+								<div class="spotlight">
+									<div class="content">
+										<header>
+											<h2>StoreKit</h2>
+										</header>
+										<p><a href="https://developer.apple.com/documentation/storekit" target="_blank">StoreKit</a> is Apple's api for AppStore related functions. My Spot uses StoreKit in several ways including: asking for app review after x amount of spots have been created, prompting the user to download the main app when in AppClip, and for in-app purchases. In-app purchases use an asynchronous iterator to check for any transaction updates to guarantee the user's purchase is successful.</p>
+									</div>
+									<span class="image"><img src="images/Storekit.png" alt="My Spot Logo" /></span>
 								</div>
 							</section>
 
