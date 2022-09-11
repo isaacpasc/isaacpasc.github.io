@@ -1,0 +1,24 @@
+{
+  "applinks": {
+    "details": [
+         {
+           "appIDs": [ "2HAP7LLHCJcom.isaacpaschall.My-Spot" ],
+           "components": [
+             {
+              "/": "/spot/*",
+              "?": { "spot": "????" },
+              "comment": "Matches any URL with a path that starts with /help/ and that has a query item with name 'articleNumber' and a value of exactly four characters."
+           },
+             {
+                "/": "/account/*",
+                "?": { "account": "????" },
+                "comment": "Matches any URL with a path that starts with /help/ and that has a query item with name 'articleNumber' and a value of exactly four characters."
+             }
+           ]
+         }
+     ]
+ },
+  "appclips" : {
+    "apps": [ "2HAP7LLHCJ.com.isaacpaschall.My-Spot.Clip" ]
+  }
+}
