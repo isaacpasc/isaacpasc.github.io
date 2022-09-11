@@ -2,7 +2,7 @@
   "applinks": {
     "details": [
          {
-           "appIDs": [ "2HAP7LLHCJ.com.isaacpaschall.My-Spot" ],
+           "appIDs": [ "2HAP7LLHCJ.com.isaacpaschall.My-Spot", "2HAP7LLHCJ.com.isaacpaschall.My-Spot.mySpotiMsg" ],
            "components": [
              { "/": "/links*" }
            ]
