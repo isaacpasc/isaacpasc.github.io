@@ -10,28 +10,15 @@
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body onload="redirect();">
-		<p>Redirecting to Appstore...2<br/> <a href="https://isaacpasc.github.io/My_Spot">Go to My Spot Official Website</a> </p>
+		<p>Redirecting to Appstore...<br/> <a href="https://isaacpasc.github.io/My_Spot">Go to My Spot Official Website</a> </p>
 
 		<script>
 			function redirect() {
 				if (isAppclipCompatible()) {
 					let params = (new URL(document.location)).searchParams;
-					let spot = params.get("spot");
-					let account = params.get("account");
 					var newURL = new URL("https://isaacpasc.github.io");
 					newURL.pathname = "/clip";
-					document.write("its compatible");
-					if (typeof spot !== 'undefined') {
-						newURL.searchParams.append(spot)
-						document.write("its spot");
-					} else if (typeof account !== 'undefined') {
-						newURL.searchParams.append(account)
-						document.write("its account");
-					} else {
-						newURL.pathname = "/bogus"
-						document.write("its neither");
-					}
-					document.write(newURL);
+					newURL.searchParams = params
 					window.location.replace(newURL)
 				} else {
 					window.location = "https://apps.apple.com/us/app/my-spot-exploration/id1613618373";
