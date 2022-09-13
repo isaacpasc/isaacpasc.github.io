@@ -11,7 +11,7 @@
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body onload="redirect();">
-		<p>Redirecting to Appstore...6<br/> <a href="https://isaacpasc.github.io/My_Spot">Go to My Spot Official Website</a> </p>
+		<p>Redirecting to Appstore...7<br/> <a href="https://isaacpasc.github.io/My_Spot">Go to My Spot Official Website</a> </p>
 
 		<script>
 			function redirect() {
@@ -22,6 +22,17 @@
 				document.write('three');
 				document.write(iOSversion()[2]);
 				document.write('four');
+				document.write(isAppclipCompatible());
+			}
+			function isAppclipCompatible() {
+				let v = iOSversion();
+				if (v[0] == 100) {
+					return false;
+				} else if (v[0] >= 16) {
+					return true;
+				} else {
+					return false;
+				}
 			}
 			function iOSversion() {
   				if (/iP(hone|od|ad)/.test(navigator.platform)) {
