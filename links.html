@@ -22,12 +22,13 @@
 					newURL.pathname = "/clip";
 					document.write("its compatible");
 					if (typeof spot !== 'undefined') {
-						newURL.searchParams = [spot]
+						newURL.searchParams.append(spot)
 						document.write("its spot");
 					} else if (typeof account !== 'undefined') {
-						newURL.searchParams = [account]
+						newURL.searchParams.append(account)
 						document.write("its account");
 					} else {
+						newURL.pathname = "/bogus"
 						document.write("its neither");
 					}
 					document.write(newURL);
