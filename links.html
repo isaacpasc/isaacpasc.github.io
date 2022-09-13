@@ -10,10 +10,10 @@
 		<link rel="shortcut icon" type="image/x-icon" href="images/myspotIcon.ico" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
-	<body>
+	<body onload="redirect();">
 		<p>Redirecting to Appstore... <br/> <a href="https://isaacpasc.github.io/My_Spot">Go to My Spot Official Website</a> </p>
 
-		<script type="text/javascript">
+		<script>
 			function redirect() {
     			document.write(getIOSVersion());
 			}
@@ -24,7 +24,6 @@
     			}
     			return [0];
 			}
-			window.onload = redirect;
-			</script>
+		</script>
 	</body>
 </html>
