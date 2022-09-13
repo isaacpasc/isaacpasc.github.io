@@ -3,7 +3,6 @@
 	<head>
 		<title>My Spot</title>
 		<meta charset="utf-8" />
-		<!-- <meta http-equiv="refresh" content="0; URL=https://apps.apple.com/us/app/my-spot-exploration/id1613618373"> -->
   		<meta name="author" content="Isaac Paschall">
 		<meta name="apple-itunes-app" content="app-id=1613618373">
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, viewport-fit=cover" />
@@ -11,18 +10,24 @@
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body onload="redirect();">
-		<p>Redirecting to Appstore...7<br/> <a href="https://isaacpasc.github.io/My_Spot">Go to My Spot Official Website</a> </p>
+		<p>Redirecting to Appstore...<br/> <a href="https://isaacpasc.github.io/My_Spot">Go to My Spot Official Website</a> </p>
 
 		<script>
 			function redirect() {
-				document.write('one');
-    			document.write(iOSversion()[0]);
-				document.write('two');
-				document.write(iOSversion()[1]);
-				document.write('three');
-				document.write(iOSversion()[2]);
-				document.write('four');
-				document.write(isAppclipCompatible());
+				if (isAppclipCompatible()) {
+					let params = (new URL(document.location)).searchParams;
+					let spot = params.get("spot");
+					let account = params.get("account");
+					if (spot.length > 0) {
+						window.location = "https://isaacpasc.github.io/clip" + "?spot=" + spot;
+					} else if (account.length > 0) {
+						window.location = "https://isaacpasc.github.io/clip" + "?account=" + account;
+					} else {
+						window.location = "https://isaacpasc.github.io/clip";
+					}
+				} else {
+					window.location = "https://apps.apple.com/us/app/my-spot-exploration/id1613618373";
+				}
 			}
 			function isAppclipCompatible() {
 				let v = iOSversion();
