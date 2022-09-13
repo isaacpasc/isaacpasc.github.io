@@ -18,10 +18,15 @@
 					let params = (new URL(document.location)).searchParams;
 					let spot = params.get("spot");
 					let account = params.get("account");
+					document.write(params);
 					if (spot.length > 0) {
-						window.location = "https://isaacpasc.github.io/clip" + "?spot=" + spot;
+						let newURL = "https://isaacpasc.github.io/clip" + "?spot=" + spot;
+						document.write(newURL);
+						window.location = newURL;
 					} else if (account.length > 0) {
-						window.location = "https://isaacpasc.github.io/clip" + "?account=" + account;
+						let newURL = "https://isaacpasc.github.io/clip" + "?account=" + account
+						document.write(newURL);
+						window.location = newURL;
 					} else {
 						window.location = "https://isaacpasc.github.io/clip";
 					}
