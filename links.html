@@ -16,8 +16,8 @@
 			function redirect() {
 				if (isAppclipCompatible()) {
 					let currURL = document.location.href;
-					let queryIndex = currentUrl.indexOf('?');
-					let query = currentURL.slice(queryIndex);
+					let queryIndex = currURL.indexOf('?');
+					let query = currURL.slice(queryIndex);
 					let newURL = ("https://isaacpasc.github.io/clip" + query);
 					//window.location.replace(newURL);
 					document.write(currURL);
