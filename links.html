@@ -15,10 +15,10 @@
 		<script>
 			function redirect() {
 				if (isAppclipCompatible()) {
-					let params = (new URL(document.location)).searchParams;
-					var newURL = new URL("https://isaacpasc.github.io");
-					newURL.pathname = "/clip";
-					newURL.searchParams = params
+					let currURL = document.location;
+					let queryIndex = currentUrl.indexOf('?');
+					let query = currentURL.slice(queryIndex);
+					var newURL = new URL("https://isaacpasc.github.io/clip" + query);
 					window.location.replace(newURL)
 				} else {
 					window.location = "https://apps.apple.com/us/app/my-spot-exploration/id1613618373";
