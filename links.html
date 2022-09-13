@@ -3,7 +3,7 @@
 	<head>
 		<title>My Spot</title>
 		<meta charset="utf-8" />
-		<meta http-equiv="refresh" content="0; URL=https://apps.apple.com/us/app/my-spot-exploration/id1613618373">
+		<!-- <meta http-equiv="refresh" content="0; URL=https://apps.apple.com/us/app/my-spot-exploration/id1613618373"> -->
   		<meta name="author" content="Isaac Paschall">
 		<meta name="apple-itunes-app" content="app-id=1613618373">
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, viewport-fit=cover" />
@@ -12,5 +12,19 @@
 	</head>
 	<body>
 		<p>Redirecting to Appstore... <br/> <a href="https://isaacpasc.github.io/My_Spot">Go to My Spot Official Website</a> </p>
+
+		<script type="text/javascript">
+			function redirect() {
+    			document.write(getIOSVersion());
+			}
+			function getIOSVersion() {
+  			  const ua = navigator.platform;
+    			if (/(iPhone|iPod|iPad)/i.test(ua)) {
+      			  return ua.match(/OS [\d_]+/i)[0].substr(3).split('_').map(n => parseInt(n));
+    			}
+    			return [0];
+			}
+			window.onload = redirect;
+			</script>
 	</body>
 </html>
