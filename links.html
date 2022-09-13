@@ -11,19 +11,20 @@
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body onload="redirect();">
-		<p>Redirecting to Appstore...4<br/> <a href="https://isaacpasc.github.io/My_Spot">Go to My Spot Official Website</a> </p>
+		<p>Redirecting to Appstore...5<br/> <a href="https://isaacpasc.github.io/My_Spot">Go to My Spot Official Website</a> </p>
 
 		<script>
 			function redirect() {
 				document.write("hello");
-    			document.write(getIOSVersion());
+    			document.write(iOSversion());
 			}
-			function getIOSVersion() {
-  			  const ua = navigator.platform;
-    			if (/(iPhone|iPod|iPad)/i.test(ua)) {
-      			  return ua.match(/OS [\d_]+/i)[0].substr(3).split('_').map(n => parseInt(n));
-    			}
-    			return [0];
+			function iOSversion() {
+  				if (/iP(hone|od|ad)/.test(navigator.platform)) {
+    				var v = (navigator.appVersion).match(/OS (\d+)_(\d+)_?(\d+)?/);
+    				return [parseInt(v[1], 10), parseInt(v[2], 10), parseInt(v[3] || 0, 10)];
+  				} else {
+					return [100];
+				}
 			}
 		</script>
 	</body>
