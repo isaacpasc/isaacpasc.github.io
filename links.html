@@ -21,10 +21,10 @@
 					var newURL = new URL("https://isaacpasc.github.io");
 					newURL.pathname = "/clip";
 					document.write("its compatible");
-					if (spot.length > 0) {
+					if (typeof spot !== 'undefined') {
 						newURL.searchParams = [spot]
 						document.write("its spot");
-					} else if (account.length > 0) {
+					} else if (typeof account !== 'undefined') {
 						newURL.searchParams = [account]
 						document.write("its account");
 					} else {
