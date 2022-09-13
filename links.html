@@ -10,7 +10,7 @@
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body onload="redirect();">
-		<p>Redirecting to Appstore...<br/> <a href="https://isaacpasc.github.io/My_Spot">Go to My Spot Official Website</a> </p>
+		<p>Redirecting to Appstore...2<br/> <a href="https://isaacpasc.github.io/My_Spot">Go to My Spot Official Website</a> </p>
 
 		<script>
 			function redirect() {
@@ -20,6 +20,7 @@
 					let account = params.get("account");
 					var newURL = new URL("https://isaacpasc.github.io");
 					newURL.pathname = "/clip";
+					document.write("its compatible");
 					if (spot.length > 0) {
 						newURL.searchParams = [spot]
 						document.write("its spot");
