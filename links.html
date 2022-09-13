@@ -18,18 +18,16 @@
 					let params = (new URL(document.location)).searchParams;
 					let spot = params.get("spot");
 					let account = params.get("account");
-					document.write(params);
+					var newURL = "https://isaacpasc.github.io/clip";
 					if (spot.length > 0) {
-						let newURL = "https://isaacpasc.github.io/clip" + "?spot=" + spot;
-						document.write(newURL);
+						newURL = "https://isaacpasc.github.io/clip" + "?" + spot;
 						window.location = newURL;
 					} else if (account.length > 0) {
-						let newURL = "https://isaacpasc.github.io/clip" + "?account=" + account
-						document.write(newURL);
+						newURL = "https://isaacpasc.github.io/clip" + "?" + account
 						window.location = newURL;
-					} else {
-						window.location = "https://isaacpasc.github.io/clip";
 					}
+					document.write(newURL);
+					window.location.replace(newURL)
 				} else {
 					window.location = "https://apps.apple.com/us/app/my-spot-exploration/id1613618373";
 				}
