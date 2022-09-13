@@ -19,9 +19,9 @@
 					let queryIndex = currURL.indexOf('?');
 					let query = currURL.slice(queryIndex);
 					let newURL = ("https://isaacpasc.github.io/clip" + query);
-					window.location.replace(newURL);
+					window.location = newURL;
 				} else {
-					//window.location = "https://apps.apple.com/us/app/my-spot-exploration/id1613618373";
+					window.location = "https://apps.apple.com/us/app/my-spot-exploration/id1613618373";
 				}
 			}
 			function isAppclipCompatible() {
