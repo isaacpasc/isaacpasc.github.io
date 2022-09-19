@@ -32,8 +32,8 @@
 						<ul>
 							<li><a href="#intro" class="active">About</a></li>
 							<li><a href="#first">Features</a></li>
-							<li><a href="#second">Technologies Used</a></li>
-							<li><a href="#cta">Privacy Policy</a></li>
+							<li><a href="#second">Technology</a></li>
+							<li><a href="https://isaacpasc.github.io/privacy">Privacy Policy</a></li>
 						</ul>
 					</nav>
 
@@ -367,6 +367,15 @@
 										<p><a href="https://developer.apple.com/documentation/storekit" target="_blank">StoreKit</a> is Apple's api for AppStore related functions. My Spot uses StoreKit in several ways including: asking for app review after x amount of spots have been created, prompting the user to download the main app when in AppClip, and for in-app purchases. In-app purchases use an asynchronous iterator to check for any transaction updates to guarantee the user's purchase is successful.</p>
 									</div>
 									<span class="image"><img src="images/Storekit.png" alt="My Spot Logo" /></span>
+								</div>
+								<div class="spotlight">
+									<div class="content">
+										<header>
+											<h2>Core Transferable</h2>
+										</header>
+										<p><a href="https://developer.apple.com/documentation/coretransferable" target="_blank">Core Transferable</a> is Apple's api for drap and drop related functions. My Spot uses Core Transferable in devices running IOS 16 or above. Press and hold on any spot in a list and it will become draggable to any location inside or outside the app. Spots that are locally saved and in the my spots tab can be drag and dropped into playlists. Spots that are in the cloud or from discover/profile tab can be drag and dropped into any textfield such as messages or mail, where the payload is link the spot.</p>
+									</div>
+									<span class="image"><img src="images/CoreTransferrable.png" alt="My Spot Logo" /></span>
 								</div>
 							</section>
 
