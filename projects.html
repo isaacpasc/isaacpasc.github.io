@@ -15,6 +15,22 @@
 	</head>
 	<body class="container" id="background">
 
+		<!-- Hamburger Menu -->
+		<nav role="navigation">
+			<div id="menuToggle">
+			  <input type="checkbox" />
+			  <span></span>
+			  <span></span>
+			  <span></span>
+			  <ul id="menu">
+				<a href="#myspot"><li>My Spot</li></a>
+				<a href="#news"><li>News App</li></a>
+				<a href="#querydata"><li>Data Query</li></a>
+				<a href="#compression"><li>Compression Algorithm</li></a>
+			  </ul>
+			</div>
+		</nav>
+
 		<!-- HEADER -->
 		<header id="header">
 			<span class="logo"><img src="images/Isaac.jpg" class="isaac_filter" alt="Isaac Paschall" /></span>
@@ -32,15 +48,21 @@
 		<div class="content">
 			<nav class="topnav">
 				<ul>
-					<li><a href="index.html">About Me</a></li>
-					<li><a href="experience.html">Experience</a></li>
-					<li><a href="projects.html" class="selected">Projects</a></li>
-					<li><a href="skills.html">Skills</a></li>
+					<li><a href="index">About Me</a></li>
+					<li><a href="experience">Experience</a></li>
+					<li><a href="projects" class="selected">Projects</a></li>
+					<li><a href="skills">Skills</a></li>
 				</ul>
 			</nav>
+			<div class="horizontalscrollnav">
+				<a href="#myspot">My Spot</a>
+				<a href="#news"></a>News App</a>
+				<a href="#querydata">Data Query</a>
+				<a href="#compression">Compression Algorithm</a>
+			</div>
 			
 			<!-- My Spot -->
-			<div class="point">
+			<div class="point" id="myspot">
 				<h2>My Spot</h2>
 				<span><img class="filter-red" src="images/logo.svg" alt="My Spot Logo" /></span>
 				<p>My Spot is my most ambitious project yet! It's an iOS, watchOS, and iPadOS app with widgets, 
@@ -54,7 +76,7 @@
 			</div>
 
 			<!-- News App -->
-			<div class="point">
+			<div class="point" id="news">
 				<h2>News App</h2>
 				<span><img src="images/news.jpg" alt="News Logo" /></span>
 				<p><a href="https://github.com/isaacpasc/SwiftBasics-UIkit-And-SwiftUI" target="_blank">News App</a> is 
@@ -65,7 +87,7 @@
 			</div>
 
 			<!-- Data Query -->
-			<div class="point">
+			<div class="point" id="querydata">
 				<h2>Data Query</h2>
 				<span><img src="images/dfs.jpg" alt="Graph Logo" /></span>
 				<p><a href="https://github.com/isaacpasc/compressionAlgorithm" target="_blank">Data Query</a> is 
@@ -75,7 +97,7 @@
 			</div>
 
 			<!-- Compression Algorithm -->
-			<div class="point">
+			<div class="point" id="compression">
 				<h2>Compression Algorithm</h2>
 				<span><img src="images/compress.jpg" alt="Compress Logo" /></span>
 				<p><a href="https://github.com/isaacpasc/graphQueries" target="_blank">Compression Algorithm</a> is 

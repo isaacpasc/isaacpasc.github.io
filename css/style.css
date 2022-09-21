@@ -297,6 +297,7 @@ body {
 
 /* content points */
 .point {
+	scroll-margin-top: 3em;
 	display: grid;
 	grid-template-columns: 1fr auto;
 	grid-template-rows: 0.1fr 1fr;
@@ -336,7 +337,6 @@ body {
 	font-weight: 500;
 	color: #121212;
 	font-size: 2.5em;
-	padding-top: 2em;
 	text-align: center;
 	grid-column-start: 1;
 	grid-column-end: 3;
@@ -419,6 +419,7 @@ body {
 		padding: 0.01em;
 	}
 	.point {
+		scroll-margin-top: 6.2em;
 		padding-left: 1em;
 		padding-right: 1em;
 		grid-template-columns: 1fr 1fr;
@@ -461,6 +462,9 @@ body {
 	}
 	.horizontalscrollnav {
 		display: flex;
+	}
+	#footer {
+		padding-left: 0;
 	}
 }
 
