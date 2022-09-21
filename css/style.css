@@ -1,0 +1,564 @@
+/* Prevent overscroll */
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+    overscroll-behavior: none;
+}
+
+/* Background Color */
+#background {
+	background: #121212;
+}
+
+/* Header */
+#header {
+	grid-column-start: 1;
+	grid-column-end: 4;
+	text-align: center;
+	color: whitesmoke;
+}
+
+#header h1 {
+	margin: 0 0 0.25em 0;
+	font-size: 3.25em;
+}
+
+#header p {		
+	font-size: 1.25em;
+	letter-spacing: -0.025em;
+}
+
+/* Footer */
+#footer {
+	grid-column-start: 2;
+	grid-column-end: 3;
+	padding-left: 50px;
+	color: whitesmoke;
+}
+#footer a {
+	text-decoration: none;
+	color: red;
+}
+
+/* Color Filter */
+.filter-red{
+	filter: invert(35%) sepia(98%) saturate(3668%) hue-rotate(338deg) brightness(101%) contrast(113%);
+}
+
+.isaac_filter {
+	-moz-border-radius: 50%;
+    border-radius: 50%;
+}
+
+/* Fonts */
+
+ * {
+	font-family: 'Roboto', sans-serif;
+}
+
+ /* Main */
+.container {
+	display: grid;
+	grid-template-columns: 10% auto 10%;
+}
+
+.content {
+	grid-column-start: 2;
+	grid-column-end: 3;
+	background-color: whitesmoke;
+	border-radius: 15px;
+	box-shadow: 0px 0px 10px 10px;
+}
+
+/* NAV */
+.topnav {
+	grid-column-start: 2;
+	grid-column-end: 3;
+	position: -webkit-sticky;
+	position: sticky;
+	text-align: center;
+	top: 0;
+	padding: 0.2em;
+	background-color: #161616;
+}
+
+.topnav a.selected {
+	border-bottom: 2px solid red;
+	padding-bottom: 4px;
+}
+
+.topnav a {
+	text-decoration: none;
+	font-size: 1.2em;
+	font-weight: 500;
+}
+
+.topnav li {
+	list-style: none;
+}
+
+.topnav ul {
+	display: flex;
+  	justify-content: space-around;
+	align-items: center;
+	padding: 0;
+}
+
+.topnav a {
+	color: whitesmoke;
+	position: relative;
+	text-decoration: none;
+}
+
+.topnav a:not(.selected):before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	bottom: -5px;
+	left: 0;
+	background-color: red;
+	visibility: hidden;
+	-webkit-transform: scaleX(0);
+	transform: scaleX(0);
+	-webkit-transition: all 0.3s ease-in-out 0s;
+	transition: all 0.3s ease-in-out 0s;
+}
+  
+.topnav a:not(.selected):hover:before {
+	visibility: visible;
+	-webkit-transform: scaleX(1);
+	transform: scaleX(1);
+}
+
+/* Hamburger Nav */
+#menuToggle
+{
+  display: block;
+  position: fixed;
+  top: 20px;
+  left: 10px;
+  
+  z-index: 1;
+  
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle a
+{
+  text-decoration: none;
+  color: #232323;
+  
+  transition: color 0.3s ease;
+}
+
+#menuToggle a:hover
+{
+  color: red;
+}
+
+
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  
+  cursor: pointer;
+  
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  
+  -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: whitesmoke;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #121212;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu
+{
+	overflow: auto;
+  position: absolute;
+  width: 300px;
+  height: calc(100vh - 120px);
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  background: whitesmoke;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
+}
+
+#menu li
+{
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+/*
+ * And let's slide it in from the left
+ */
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+}
+
+/* Social Buttons */
+.socialcontainer {
+	display: flex;
+	align-items: center;
+  	justify-content: center;
+	gap: 20px;
+	padding-bottom: 20px;
+}
+.socialbtn img {
+	display:block;
+	height: 50px;
+	width: 50px;
+	padding: 1px;
+	background-color: whitesmoke;
+	border-radius: 50%;
+}
+
+/* content points */
+.point {
+	display: grid;
+	grid-template-columns: 1fr auto;
+	grid-template-rows: 0.1fr 1fr;
+	margin: auto;
+}
+
+.point p {
+	font-weight: 300;
+	font-size: 1.5em;
+	padding-left: 3em;
+	padding-right: 3em;
+	font-weight: lighter;
+	line-height: 1.65;
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 2;
+	grid-row-end: 3;
+	text-align: left;
+}
+.point p a {
+	color: red;
+	text-decoration: none;
+}
+.point h2::after {
+	display: block;
+	content: '';
+	width: 3.25em;
+	height: 2px;
+	margin-left: auto;
+	margin-right: auto;
+	background-image: -moz-linear-gradient(90deg, rgb(255, 193, 193), red, rgb(255, 193, 193));
+	background-image: -webkit-linear-gradient(90deg, rgb(255, 193, 193), red, rgb(255, 193, 193));
+	background-image: -ms-linear-gradient(90deg, rgb(255, 193, 193), red, rgb(255, 193, 193));
+	background-image: linear-gradient(90deg, rgb(255, 193, 193), red, rgb(255, 193, 193));
+}
+.point h2 {
+	font-weight: 500;
+	color: #121212;
+	font-size: 2.5em;
+	padding-top: 2em;
+	text-align: center;
+	grid-column-start: 1;
+	grid-column-end: 3;
+	grid-row-start: 1;
+	grid-row-end: 2;
+}
+.point span {
+	grid-column-start: 2;
+	grid-column-end: 3;
+	grid-row-start: 2;
+	grid-row-end: 3;
+	text-align: center;
+	margin: auto;
+	padding-right: 40px;
+}
+.point img {
+	width: 256px;
+	height: auto;
+	border: solid 1px;
+	border-radius: 100%;
+}
+.portrait, .landscape {
+	display: flex;
+  	align-items: center;
+  	justify-content: center;
+	grid-column-start: 2;
+	grid-column-end: 3;
+	grid-row-start: 2;
+	grid-row-end: 3;
+}
+.portrait iframe {
+	border: 0;
+	width: 336px; 
+	height: 576px; 
+	padding-right: 40px;
+}
+
+.landscape iframe {
+	border: 0;
+	width: 518px;
+	height: 302px;
+	padding-right: 40px;
+}
+
+@media only screen and (max-width: 1000px) {
+	.container {
+		grid-template-columns: 50px 1fr 50px;
+	}
+	.topnav a {
+		font-size: 0.8em;
+	}
+	.topnav {
+		padding: 0.01em;
+	}
+	.point {
+		padding-left: 1em;
+		padding-right: 1em;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 0.1fr auto auto;
+	}
+	.point p {
+		font-size: 1em;
+		padding-left: 0;
+		padding-right: 0;
+		text-align: center;
+		grid-column-end: 3;
+		grid-row-start: 3;
+		grid-row-end: 4;
+	}
+	.point span {
+		padding-right: 0;
+		grid-column-start: 1;
+		grid-column-end: 3;
+	}
+	.point h2 {
+		font-size: 1.5em;
+	}
+	.point img {
+		width: 150px;
+		height: auto;
+	}
+	.portrait, .landscape {
+		grid-column-start: 1;
+		grid-column-end: 3;
+	}
+	.portrait iframe {
+		padding: 0;
+		width: 280px;
+		height: 480px;
+	}
+	.landscape iframe {
+		padding: 0;
+		width: 432px;
+		height: 252px;
+	}
+}
+
+/* Skills bar graphs */
+.skill li {
+	margin: 20px 0;
+	padding: 10px;
+}
+
+.bar {
+	background: #353b48;
+	display: block;
+	height: 20px;
+	border: 1px solid rgba(0, 0, 0, 0.3);
+	border-radius: 10px;
+	overflow: hidden;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.bar:hover {
+	box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.bar span {
+	height: 20px;
+	float: left;
+	background: red;
+}
+
+.nobullet {
+	list-style-type: none;
+}
+
+.swift {
+	width: 90%;
+	animation: swift 3s;
+}
+
+@keyframes swift {
+	0% {
+		width: 0%;
+	}
+	100% {
+		width: 90%;
+	}
+}
+
+.java {
+	width: 80%;
+	animation: java 3s;
+}
+
+@keyframes java {
+	0% {
+		width: 0%;
+	}
+	100% {
+		width: 80%;
+	}
+}
+
+.cplus {
+	width: 65%;
+	animation: cplus 3s;
+}
+
+@keyframes cplus {
+	0% {
+		width: 0%;
+	}
+	100% {
+		width: 65%;
+	}
+}
+
+.sql {
+	width: 60%;
+	animation: sql 3s;
+}
+
+@keyframes sql {
+	0% {
+		width: 0%;
+	}
+	100% {
+		width: 60%;
+	}
+}
+
+.apollo {
+	width: 50%;
+	animation: apollo 3s;
+}
+
+@keyframes apollo {
+	0% {
+		width: 0%;
+	}
+	100% {
+		width: 50%;
+	}
+}
+
+.hcj {
+	width: 40%;
+	animation: hcj 3s;
+}
+
+@keyframes hcj {
+	0% {
+		width: 0%;
+	}
+	100% {
+		width: 40%;
+	}
+}
+
+.docker {
+	width: 35%;
+	animation: docker 3s;
+}
+
+@keyframes docker {
+	0% {
+		width: 0%;
+	}
+	100% {
+		width: 35%;
+	}
+}

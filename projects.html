@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Isaac Paschall</title>
+		<meta charset="utf-8" />
+		<meta name="description" content="Portfolio website to showcase skills, projects, and work experience of Isaac Paschall, a Computer Science major software engineer ios developer">
+  		<meta name="keywords" content="Portfolio, Isaac, Paschall, Software Engineer, ios developer, swift, swiftui, uikit, my spot, my spot exploration">
+  		<meta name="author" content="Isaac Paschall">
+		<meta property="og:title" content="Isaac Paschall" />
+		<meta property="og:image" content="https://isaacpasc.github.io/images/Isaac.jpg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, viewport-fit=cover" />
+		<link rel="shortcut icon" type="image/x-icon" href="images/scripticon.ico" />
+		<link rel="stylesheet" href="css/style.css" />
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+	</head>
+	<body class="container" id="background">
+
+		<!-- HEADER -->
+		<header id="header">
+			<span class="logo"><img src="images/Isaac.jpg" class="isaac_filter" alt="Isaac Paschall" /></span>
+			<h1>Isaac Paschall</h1>
+			<p>Software Engineer<br />
+				iOS Developer<br />
+				<a style="text-decoration: none; color: whitesmoke;" href="mailto: ipaschall4275@gmail.com">ipaschall4275@gmail.com</a></p>
+				<div class="socialcontainer">
+					<a class="socialbtn" href="https://github.com/isaacpasc" target="_blank"><img src="images/GithubIcon.png"/></a>
+					<a class="socialbtn" href="https://www.linkedin.com/in/isaac-paschall-51169a165/" target="_blank"><img src="images/LinkedInLogo.png"/></a>
+				</div>
+		</header>
+
+		<!-- MAIN CONTENT -->
+		<div class="content">
+			<nav class="topnav">
+				<ul>
+					<li><a href="index.html">About Me</a></li>
+					<li><a href="experience.html">Experience</a></li>
+					<li><a href="projects.html" class="selected">Projects</a></li>
+					<li><a href="skills.html">Skills</a></li>
+				</ul>
+			</nav>
+			
+			<!-- My Spot -->
+			<div class="point">
+				<h2>My Spot</h2>
+				<span><img class="filter-red" src="images/logo.svg" alt="My Spot Logo" /></span>
+				<p>My Spot is my most ambitious project yet! It's an iOS, watchOS, and iPadOS app with widgets, 
+					notifications (with service/content extensions), iMessage app, AppClip, and much more. My Spot 
+					is a social media app centered around locations. It uses many Apple frameworks and runs mainly in 
+					the SwiftUI lifecycle but also utilizes many UIKit features. Some frameworks used include: Cloudkit, CoreData, CoreML, and Combine. 
+					For more information please visit the 
+					<a href="https://isaacpasc.github.io/My_Spot" target="_blank">My Spot Offical Website</a> which goes in depth on technologies 
+					used and all of its features or find it on the 
+					<a href="https://apps.apple.com/us/app/my-spot-exploration/id1613618373" target="_blank">AppStore</a>.</p>
+			</div>
+
+			<!-- News App -->
+			<div class="point">
+				<h2>News App</h2>
+				<span><img src="images/news.jpg" alt="News Logo" /></span>
+				<p><a href="https://github.com/isaacpasc/SwiftBasics-UIkit-And-SwiftUI" target="_blank">News App</a> is 
+					is an ios app that allows users to search for relevant news articles. News app was made twice, once in 
+					SwiftUI and once in UIKit. It features many swift fundementals that are key for success in large 
+					scale applications. These fundementals include: protocals, delegate pattern, image caching, 
+					generic api calls with combine, pagination, TableView/ListView, and much more!</p>
+			</div>
+
+			<!-- Data Query -->
+			<div class="point">
+				<h2>Data Query</h2>
+				<span><img src="images/dfs.jpg" alt="Graph Logo" /></span>
+				<p><a href="https://github.com/isaacpasc/compressionAlgorithm" target="_blank">Data Query</a> is 
+					a command line application using c++ with a Makefile. It querys large css files based on parameters. These queries 
+					use several data structures (custom made, no libraries) such as hashtables, BST, and graphs in adjacency list. These data 
+					structes are traversed using Floyd Warshall Algorithm and DFS (again, no libraries are used).</p>
+			</div>
+
+			<!-- Compression Algorithm -->
+			<div class="point">
+				<h2>Compression Algorithm</h2>
+				<span><img src="images/compress.jpg" alt="Compress Logo" /></span>
+				<p><a href="https://github.com/isaacpasc/graphQueries" target="_blank">Compression Algorithm</a> is 
+					a command line application using c++ with a Makefile. It encodes or decodes any text file with ASCII 
+					characters by using either insertion sort or merge sort to build a binary search tree and traverse the tree to 
+					encode/decode.</p>
+			</div>
+		</div>
+	</body>
+</html>
