@@ -354,6 +354,7 @@ body {
 	padding-right: 40px;
 }
 .point img {
+	z-index: 9;
 	width: 256px;
 	height: auto;
 	border: solid 1px;
