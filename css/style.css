@@ -74,6 +74,7 @@ body {
 
 /* NAV */
 .topnav {
+	z-index: 10;
 	grid-column-start: 2;
 	grid-column-end: 3;
 	position: -webkit-sticky;
@@ -383,6 +384,7 @@ body {
 
 /* Horizontal Scroll */
 .horizontalscrollnav {
+	z-index: 10;
 	display: none;
 	justify-content: flex-start;
 	gap: 10px;
