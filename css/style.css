@@ -48,8 +48,9 @@ body {
 }
 
 .isaac_filter {
-	-moz-border-radius: 50%;
-    border-radius: 50%;
+	border-radius: 50%;
+	object-fit: cover;
+	object-position: center;
 }
 
 /* Fonts */

@@ -27,6 +27,7 @@
 					<a class="socialbtn" href="https://www.linkedin.com/in/isaac-paschall-51169a165/" target="_blank"><img src="images/LinkedInLogo.png"/></a>
 					<a class="socialbtn" href="https://www.myspotexploration.com" target="_blank"><img src="images/icon.png"/></a>
 					<a class="socialbtn" href="https://dashifyios.netlify.app" target="_blank"><img src="images/dashifyCircleD.png"/></a>
+					<a class="socialbtn" href="https://ask-ai-chatbot.netlify.app/" target="_blank"><img src="images/logo_with_color.png"/></a>
 					<a class="socialbtn" href="https://foodbot.netlify.app/" target="_blank"><img src="images/foodbotlogonogb.png"/></a>
 				</div>
 		</header>
@@ -44,6 +45,7 @@
 			<div class="horizontalscrollnav">
 				<a href="#myspot">My Spot</a>
 				<a href="#dashify">Dashify</a>
+				<a href="#askai">Ask AI</a>
 				<a href="#foodbot">Food Bot</a>
 				<a href="#news">News App</a>
 				<a href="#querydata">Data Query</a>
@@ -54,66 +56,67 @@
 			<div class="point" id="myspot">
 				<h2>My Spot</h2>
 				<span><img src="images/icon.png" alt="My Spot Logo" /></span>
-				<p>My Spot is my most ambitious project yet! It's an iOS, watchOS, and iPadOS app with widgets, 
-					notifications (with service/content extensions), iMessage app, AppClip, and much more. My Spot 
-					is a social media app centered around locations. It uses many Apple frameworks and runs mainly in 
-					the SwiftUI lifecycle but also utilizes many UIKit features. Some frameworks used include: Cloudkit, CoreData, CoreML, and Combine. 
-					For more information please visit the 
-					<a href="https://myspotexploration.com" target="_blank">My Spot Offical Website</a> which goes in depth on technologies 
-					used and all of its features or find it on the 
-					<a href="https://apps.apple.com/us/app/my-spot-exploration/id1613618373" target="_blank">AppStore</a>.</p>
+				<p>My Spot is my most ambitious project to date! This app is available on iOS, watchOS, and iPadOS and boasts a range of features such as widgets, notifications (with service/content extensions), iMessage app, and AppClip.
+
+					My Spot is a unique social media app that revolves around location-based sharing. Built using various Apple frameworks, My Spot is primarily based on the SwiftUI lifecycle, but also makes use of several key UIKit features. Some of the frameworks that were utilized during the development process include Cloudkit, CoreData, CoreML, Admob, Combine, Firebase, Revenue Cat, and many others.
+					
+					To learn more about My Spot and the technology behind it, please visit the <a href="https://myspotexploration.com" target="_blank">official My Spot website</a>. Here you'll find a detailed breakdown of all the app's features and the technologies that make it possible. Alternatively, you can find My Spot on the <a href="https://apps.apple.com/us/app/my-spot-exploration/id1613618373" target="_blank">AppStore</a> and start exploring its many capabilities today.</p>
+			</div>
+
+			<!-- Ask AI -->
+			<div class="point" id="askai">
+				<h2>Ask AI</h2>
+				<span><img src="images/logo_with_color.png" alt="Ask AI" /></span>
+				<p>Ask AI is an innovative AI chatbot that utilizes a range of cutting-edge technologies to provide you with the answers you need. Built with Firebase, GPT-3, Cloudkit, CoreData, Admob, and Revenue Cat, this app uses Firebase for analytics, Firestore database, authentication, and cloud functions to ensure seamless performance. By leveraging the power of Open AI GPT-3 model api, Ask AI is able to provide comprehensive answers to a wide range of questions. The app also features a unique typing effect from the AI, made possible through server-sent events for faster responses. Authentication is done through Sign in with Apple, with cloud functions available to revoke authentication tokens as needed. Visit the <a href="https://ask-ai-chatbot.netlify.app/" target="_blank">Ask AI official website</a> to learn more about the technologies used in this project, or check it out on the <a href="https://apps.apple.com/us/app/ask-ai-free-gpt-chat-bot/id1671670609" target="_blank">AppStore</a>.</p>
 			</div>
 
 			<!-- Dashify -->
 			<div class="point" id="dashify">
 				<h2>Dashify</h2>
 				<span><img src="images/dashifyCircleD.png" alt="Dashify Logo" /></span>
-				<p>Dashify is an ios client for web hosting service, <a href="https://www.netlify.com/" target="_blank">Netlify</a>. In this project I learned to create generic api calls with async/await and combine, authentication and preventing CSRF attacks, and WebViews with javascript. The project also uses keychain to store login tokens.
-					The login process for Dashify uses a WebView to present a login screen for Netlify users. For more information please visit 
-					<a href="https://dashifyios.netlify.app" target="_blank">Dashify Offical Website</a> which goes in depth on technologies 
-					used and all of its features or find it on the 
-					<a href="https://apps.apple.com/us/app/dashify-manage-your-website/id6443705790" target="_blank">AppStore</a>.</p>
+				<p>Dashify is an iOS client that is designed to work seamlessly with the popular web hosting service, <a href="https://www.netlify.com/" target="_blank">Netlify</a>. Through the development process, I gained valuable experience in creating generic api calls with async/await and combine, as well as authentication and preventing CSRF attacks. The project also made use of WebViews with javascript and keychain to securely store login tokens.
+
+					The login process for Dashify is powered by a WebView, providing Netlify users with a streamlined login experience. The use of WebViews allowed for a seamless integration of the Netlify login screen into the app, while ensuring the authentication process is as secure as possible.
+					
+					For more information about Dashify, its features, and the technology that makes it possible, please visit the <a href="https://dashifyios.netlify.app" target="_blank">official Dashify website</a>. Alternatively, you can find Dashify on the <a href="https://apps.apple.com/us/app/dashify-manage-your-website/id6443705790" target="_blank">AppStore</a> and start exploring the many benefits it offers to Netlify users.</p>
 			</div>
 
 			<!-- Food Bot -->
 			<div class="point" id="foodbot">
 				<h2>Food Bot</h2>
 				<span><img src="images/foodbotlogonogb.png" alt="Food Bot Logo" /></span>
-				<p>Dashify is an ios client for web hosting service, <a href="https://www.netlify.com/" target="_blank">Netlify</a>. In this project, I learned how to integrate javascript with WKWebView for 2 way communication and use CloudKit to build a SDUI app. Food Bot is an app that autofills surveys for various restaurants in order to receive rewards such as free food items. Food Bot also uses AVCapture, Machine Learning, and regular expressions to scrape survey codes off of receipts.  For more information please visit 
-					<a href="https://foodbot.netlify.app/" target="_blank">Food Bot Offical Website</a> which goes in depth on technologies 
-					used or find it on the 
-					<a href="https://apps.apple.com/us/app/food-bot-survey-filler/id6444194042" target="_blank">AppStore</a>.</p>
+				<p>Food Bot is a unique app that I created to make the process of filling out restaurant surveys a breeze! Through the development of this project, I gained valuable experience in integrating javascript with WKWebView for two-way communication, as well as using CloudKit to build a sleek and intuitive user interface.
+
+					Food Bot simplifies the process of filling out restaurant surveys by automatically populating the necessary fields in exchange for rewards such as free food items. The app also uses a range of cutting-edge technologies such as AVCapture, Machine Learning, and regular expressions to scrape survey codes off of receipts, further streamlining the survey process for users.
+					
+					For more information about Food Bot and the technology that powers it, please visit the <a href="https://foodbot.netlify.app/" target="_blank">official Food Bot website</a>. Here, you'll find a detailed breakdown of the app's features and the technologies used to create it. Alternatively, you can find Food Bot on the <a href="https://apps.apple.com/us/app/food-bot-survey-filler/id6444194042" target="_blank">AppStore</a> and start taking advantage of its many time-saving benefits today.
+				</p>
 			</div>
 
 			<!-- News App -->
 			<div class="point" id="news">
 				<h2>News App</h2>
 				<span><img src="images/news.jpg" alt="News Logo" /></span>
-				<p><a href="https://github.com/isaacpasc/SwiftBasics-UIkit-And-SwiftUI" target="_blank">News App</a> is 
-					is an ios app that allows users to search for relevant news articles. News app was made twice, once in 
-					SwiftUI and once in UIKit. It features many swift fundementals that are key for success in large 
-					scale applications. These fundementals include: protocals, delegate pattern, image caching, 
-					generic api calls with combine, pagination, TableView/ListView, and much more!</p>
+				<p><a href="https://github.com/isaacpasc/SwiftBasics-UIkit-And-SwiftUI" target="_blank">News App</a> is an iOS application designed to help users easily find relevant news articles. I created this app twice, once in SwiftUI and once in UIKit, leveraging key Swift fundamentals that are essential for success in building large-scale applications.
+
+					The app includes a range of advanced features such as protocols, delegate patterns, image caching, and generic API calls with Combine. Additionally, it implements pagination, TableView/ListView, and many more features that have helped to establish it as a powerful and versatile tool.
+					</p>
 			</div>
 
 			<!-- Data Query -->
 			<div class="point" id="querydata">
 				<h2>Data Query</h2>
 				<span><img src="images/dfs.jpg" alt="Graph Logo" /></span>
-				<p><a href="https://github.com/isaacpasc/compressionAlgorithm" target="_blank">Data Query</a> is 
-					a command line application using c++ with a Makefile. It querys large css files based on parameters. These queries 
-					use several data structures (custom made, no libraries) such as hashtables, BST, and graphs in adjacency list. These data 
-					structes are traversed using Floyd Warshall Algorithm and DFS (again, no libraries are used).</p>
+				<p><a href="https://github.com/isaacpasc/compressionAlgorithm" target="_blank">Data Query</a> is a command-line application created using C++. This application is designed to query large files based on parameters, and it employs several custom-made data structures, with no libraries involved.
+
+					These data structures include hashtables, Binary Search Trees, and graphs in adjacency list form. Moreover, Data Query utilizes the Floyd Warshall Algorithm and DFS algorithms to traverse these structures, without any external libraries.
 			</div>
 
 			<!-- Compression Algorithm -->
 			<div class="point" id="compression">
 				<h2>Compression Algorithm</h2>
 				<span><img src="images/compress.jpg" alt="Compress Logo" /></span>
-				<p><a href="https://github.com/isaacpasc/graphQueries" target="_blank">Compression Algorithm</a> is 
-					a command line application using c++ with a Makefile. It encodes or decodes any text file with ASCII 
-					characters by using either insertion sort or merge sort to build a binary search tree and traverse the tree to 
-					encode/decode.</p>
+				<p><a href="https://github.com/isaacpasc/graphQueries" target="_blank">Compression Algorithm</a> is a command-line tool built in C++ with a Makefile that allows for the encoding or decoding of any ASCII text file. The tool uses either insertion sort or merge sort algorithms to build a binary search tree, which is then traversed to encode or decode the file. This project showcases my skills in developing efficient and effective algorithms in C++, as well as my ability to create and manage complex software projects.</p>
 			</div>
 		</div>
 	</body>
